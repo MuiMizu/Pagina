@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 40px;
+    display: inline-block;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.boton-volver {
+    padding: 8px 16px;
+    background-color: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2rem;
+}
+
+.seccion-planes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tarjeta-plan {
+    width: 100%;
+    max-width: 300px;
+    padding: 2rem;
+    margin: 1rem;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;     
+}
+
+.tarjeta-plan.popular {
+    border: 2px solid #667eea;
+}
+
+.etiqueta-popular {
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 2px;
+    border-radius: 20px 20px 0 0;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.tarjeta-plan > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+.tarjeta-plan > div > .precio-antiguo {
+    font-size: 1.2rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.tarjeta-plan > div > .precio {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.tarjeta-plan ul {
+    list-style: none;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.tarjeta-plan ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.precio {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.precio-antiguo {
+    font-size: 1.2rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.boton-plan {
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: #667eea;
+    color: white;
+}
+
+
+.boton-plan.actual {
+    background-color: #e0e0e0;
+    color: #666;
+    cursor: default;
+}
+
+.seccion-empresa {
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacto-ventas {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 24px;
+    background-color: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer article {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .seccion-planes {
+        max-width: 1400px;
+        margin: 2rem auto;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .tarjeta-plan {
+        max-width: 280px;
+        flex: 0 1 280px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #ffe5e5;
+    }
+    .tarjeta-plan {
+        border-color: #ff6b6b;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+    .tarjeta-plan.popular {
+        border-color: #ff4444;
+    }
+    .etiqueta-popular {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff4444 100%);
+    }
+    .boton-plan {
+        background-color: #ff6b6b;
+    }
+    .boton-plan.actual {
+        background-color: #ffcccc;
+        color: #cc0000;
+    }
+    .contacto-ventas {
+        background-color: #ff6b6b;
+    }
+    .contacto-ventas:hover {
+        background-color: #ff4444;
+        box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+    }
+    .boton-volver {
+        background-color: #ff6b6b;
+    }
+    .seccion-planes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarjeta-plan {
+        width: 100%;
+    }
+    main {
+        padding: 1rem;
+    }
+    header {
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    header nav {
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .precio {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .seccion-planes {
+        justify-content: space-around;
+    }
+    .tarjeta-plan {
+        max-width: 280px;
+        flex: 0 1 280px;
+    }
+}
